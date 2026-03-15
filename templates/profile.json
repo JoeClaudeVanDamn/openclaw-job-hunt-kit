@@ -5,23 +5,23 @@
     "phone": "+1234567890",
     "location": "City, Country",
     "linkedin": "https://www.linkedin.com/in/your-profile/",
-    "work_authorization": "Requires visa sponsorship / Has EU work permit / etc.",
+    "work_authorization": "Requires visa sponsorship / Has work permit / US Citizen / etc.",
     "willing_to_relocate": true,
-    "target_location": "Ireland (primary), Europe (secondary)"
+    "target_location": "Your target region"
   },
   "job_preferences": {
-    "titles": ["Senior Product Manager", "Product Manager"],
-    "salary_min": 75000,
-    "salary_max": 90000,
+    "titles": ["Your Target Role", "Senior Your Target Role"],
+    "salary_min": 0,
+    "salary_max": 0,
     "currency": "EUR",
-    "industries": ["Tech", "SaaS", "Marketplace"],
-    "visa_required": true
+    "industries": ["Your", "Target", "Industries"],
+    "visa_required": false
   },
   "current_role": {
     "title": "Your Current Title",
     "company": "Current Company",
     "location": "City",
-    "years_experience": 5
+    "years_experience": 0
   },
   "cv_path": "/path/to/your/cv.pdf",
   "cover_letter_template": "templates/cover-letter-template.md",
@@ -33,42 +33,38 @@
   },
   "work_history": [
     {
-      "title": "Senior Product Manager",
-      "company": "Company Name",
+      "title": "Your Current Role",
+      "company": "Current Company",
       "location": "City, Country",
-      "start_date": "2022-12",
+      "start_date": "YYYY-MM",
       "end_date": "present",
-      "description": "Brief description of role and key achievements"
+      "description": "Brief description of role and key achievements with metrics"
     },
     {
-      "title": "Product Manager",
+      "title": "Previous Role",
       "company": "Previous Company",
       "location": "City, Country",
-      "start_date": "2020-01",
-      "end_date": "2022-11",
-      "description": "Brief description of role and key achievements"
+      "start_date": "YYYY-MM",
+      "end_date": "YYYY-MM",
+      "description": "Brief description of role and key achievements with metrics"
     }
   ],
   "education": [
     {
-      "degree": "Bachelor's in Computer Science",
+      "degree": "Your Degree",
       "university": "Your University",
-      "graduation_year": 2019
+      "graduation_year": 0
     }
   ],
   "skills": [
-    "Product management",
-    "Agile",
-    "Scrum",
-    "Data analysis",
-    "SQL",
-    "A/B testing",
-    "Roadmapping",
-    "Stakeholder management"
+    "Your",
+    "Key",
+    "Skills",
+    "Here"
   ],
   "additional": {
     "notice_period": "1 month",
-    "years_experience": 5,
+    "years_experience": 0,
     "languages": ["English (fluent)"]
   }
 }

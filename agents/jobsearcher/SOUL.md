@@ -13,33 +13,29 @@ Browse configured job board URLs and extract relevant listings. Do NOT use free-
 {{SEARCH_URLS}}
 
 Configure your search URLs in `config.json`. Example sources:
-- Indeed: `https://ie.indeed.com/q-product-manager-jobs.html`
-- Glassdoor: `https://www.glassdoor.ie/Job/ireland-product-manager-jobs-SRCH_IL.0,7_IN70_KO8,23.htm`
-- LinkedIn: `https://www.linkedin.com/jobs/search/?keywords=product%20manager&location=Ireland`
+- Indeed: `https://ie.indeed.com/q-your-role-jobs.html`
+- Glassdoor: `https://www.glassdoor.com/Job/your-location-your-role-jobs.htm`
+- LinkedIn: `https://www.linkedin.com/jobs/search/?keywords=your+role&location=Your+Location`
 
 For each source: use web_fetch to load the page, extract job titles, companies, locations, and URLs. **These pages are paginated — make sure to follow pagination (next page links, page 2, 3, etc.) and scrape ALL available pages, not just page 1.** Keep going until you run out of pages or hit {{MAX_JOBS}} jobs total. Follow individual job links to get the actual application URL (company career page, Greenhouse, Workday, etc.).
 
 ## Title Matching
 Configure accepted titles via {{TARGET_TITLES}} in config.json.
 
-Example accepted titles (for Product Manager roles):
-✅ Accept ANY product-related role at or below Senior level:
-- "Product Manager"
-- "Senior Product Manager"
-- "Sr. Product Manager"
-- "Sr Product Manager"
-- "Senior PM"
-- "Associate Product Manager"
-- "Product Manager II"
-- "Product Manager, [specialty]" (e.g. "Product Manager, Growth")
+Define your accepted titles in config.json `target_titles`. The searcher will match these and common variants (e.g. "Sr." prefix, "II"/"III" suffix, specialty subtitles like "Software Engineer, Backend").
 
-❌ Reject roles ABOVE Senior level:
-- Lead, Principal, Group, Staff, Head of, Director of, VP of, Chief
+✅ Accept: Exact matches and reasonable variants of your target titles
+❌ Reject: Titles clearly above or below your target level, or in adjacent but different role families
 
-❌ Reject non-core variants:
-- Product Designer, Product Analyst, Product Marketing Manager, Product Owner (unless clearly a PM role)
+**You must customize the accept/reject patterns for your role family.**
 
-Customize the accept/reject patterns above to match your target role family.
+Example for Software Engineering:
+- ✅ "Software Engineer", "Senior Software Engineer", "Backend Engineer", "Full Stack Developer"
+- ❌ "Staff Engineer", "Principal Engineer", "Engineering Manager", "DevOps Engineer"
+
+Example for Product Management:
+- ✅ "Product Manager", "Senior Product Manager", "Associate PM"
+- ❌ "Director of Product", "VP Product", "Product Designer", "Product Marketing Manager"
 
 ## Filtering Rules
 ✅ INCLUDE if:
@@ -54,7 +50,7 @@ Customize the accept/reject patterns above to match your target role family.
 - Still include jobs that say "must have right to work" — just put them lower in the list
 
 ❌ EXCLUDE if:
-- Title is above Senior level (Lead/Principal/Group/Staff/Head/Director/VP)
+- Title is above your target seniority level (customize per your role family)
 - Same company already in output list
 - Salary clearly below {{SALARY_MIN}} or above {{SALARY_MAX}}
 - Already Applied in Notion DB {{NOTION_DB_ID}}

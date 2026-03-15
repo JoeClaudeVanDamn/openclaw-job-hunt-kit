@@ -14,15 +14,11 @@
   "telegram_bot_token": "",
   "max_jobs": 50,
   "batch_size": 10,
-  "target_locations": ["Ireland", "UK", "Netherlands", "Germany"],
-  "target_titles": ["Product Manager", "Senior Product Manager"],
-  "salary_eur": 80000,
-  "salary_gbp": 75000,
-  "salary_usd": 90000,
-  "search_urls": [
-    "https://ie.indeed.com/q-product-manager-jobs.html",
-    "https://www.glassdoor.ie/Job/ireland-product-manager-jobs-SRCH_IL.0,7_IN70_KO8,23.htm",
-    "https://www.linkedin.com/jobs/search/?keywords=product%20manager&location=Ireland"
-  ],
+  "target_locations": [],
+  "target_titles": [],
+  "salary_eur": 0,
+  "salary_gbp": 0,
+  "salary_usd": 0,
+  "search_urls": [],
   "date_window_days": 14
 }

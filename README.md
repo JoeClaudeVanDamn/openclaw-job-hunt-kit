@@ -1,6 +1,6 @@
 # OpenClaw Job Hunt Kit
 
-An automated job application system powered by **OpenClaw + Claude Code + Playwright MCP**.
+An automated job application system powered by **OpenClaw + Claude Code + Playwright MCP**. Works for **any role** — software engineering, product management, design, marketing, data science, or anything else.
 
 Three autonomous agents work together every night to find relevant jobs, apply to them, and log everything — so you wake up to a Telegram summary of what got done.
 
@@ -77,9 +77,9 @@ Edit `templates/config.json` with your details:
   "notion_db_id": "your-notion-db-id",
   "telegram_chat_id": "your-chat-id",
   "telegram_bot_token": "your-bot-token",
-  "target_locations": ["Ireland", "UK", "Netherlands"],
-  "target_titles": ["Product Manager", "Senior Product Manager"],
-  "search_urls": ["https://ie.indeed.com/q-product-manager-jobs.html"],
+  "target_locations": ["Your target countries/cities"],
+  "target_titles": ["Your Target Role", "Senior Your Target Role"],
+  "search_urls": ["https://indeed.com/jobs?q=your+role&l=your+location"],
   ...
 }
 ```
@@ -133,15 +133,14 @@ This runs the job manager at 2 AM every night.
 
 ## Customizing for Different Roles / Locations
 
-### Change target roles
-Edit `target_titles` in `config.json`:
+### Set your target roles
+Edit `target_titles` in `config.json` with your desired job titles:
 ```json
 "target_titles": ["Software Engineer", "Senior Software Engineer", "Backend Engineer"]
 ```
+Then update the title matching rules in `agents/jobsearcher/SOUL.md` with your accept/reject patterns.
 
-Then update the title matching rules in `agents/jobsearcher/SOUL.md` to match your role variants.
-
-### Change target locations
+### Set your target locations
 Edit `target_locations` in `config.json`:
 ```json
 "target_locations": ["USA", "Canada", "Remote North America"]
