@@ -1,0 +1,74 @@
+{
+  "personal": {
+    "name": "Your Full Name",
+    "email": "your@email.com",
+    "phone": "+1234567890",
+    "location": "City, Country",
+    "linkedin": "https://www.linkedin.com/in/your-profile/",
+    "work_authorization": "Requires visa sponsorship / Has EU work permit / etc.",
+    "willing_to_relocate": true,
+    "target_location": "Ireland (primary), Europe (secondary)"
+  },
+  "job_preferences": {
+    "titles": ["Senior Product Manager", "Product Manager"],
+    "salary_min": 75000,
+    "salary_max": 90000,
+    "currency": "EUR",
+    "industries": ["Tech", "SaaS", "Marketplace"],
+    "visa_required": true
+  },
+  "current_role": {
+    "title": "Your Current Title",
+    "company": "Current Company",
+    "location": "City",
+    "years_experience": 5
+  },
+  "cv_path": "/path/to/your/cv.pdf",
+  "cover_letter_template": "templates/cover-letter-template.md",
+  "notion_tracker_db": "your-notion-db-id",
+  "notion_key_path": "~/.config/notion/api_key",
+  "telegram_notify": {
+    "chat_id": "your-telegram-chat-id",
+    "bot_token": "your-bot-token"
+  },
+  "work_history": [
+    {
+      "title": "Senior Product Manager",
+      "company": "Company Name",
+      "location": "City, Country",
+      "start_date": "2022-12",
+      "end_date": "present",
+      "description": "Brief description of role and key achievements"
+    },
+    {
+      "title": "Product Manager",
+      "company": "Previous Company",
+      "location": "City, Country",
+      "start_date": "2020-01",
+      "end_date": "2022-11",
+      "description": "Brief description of role and key achievements"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's in Computer Science",
+      "university": "Your University",
+      "graduation_year": 2019
+    }
+  ],
+  "skills": [
+    "Product management",
+    "Agile",
+    "Scrum",
+    "Data analysis",
+    "SQL",
+    "A/B testing",
+    "Roadmapping",
+    "Stakeholder management"
+  ],
+  "additional": {
+    "notice_period": "1 month",
+    "years_experience": 5,
+    "languages": ["English (fluent)"]
+  }
+}
